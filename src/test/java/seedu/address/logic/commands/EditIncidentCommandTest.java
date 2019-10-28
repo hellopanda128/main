@@ -143,8 +143,6 @@ public class EditIncidentCommandTest {
     @Test
     public void execute_invalidIncidentIndexUnfilteredList_failure() {
         Index outOfBoundIndex = Index.fromOneBased(model.getFilteredPersonList().size() + 1);
-        //EditPersonDescriptor descriptor = new EditPersonDescriptorBuilder().withName(VALID_NAME_BOB).build();
-        //EditCommand editCommand = new EditCommand(outOfBoundIndex, descriptor);
         EditIncident editor = new EditIncidentBuilder().withCaller(DEFAULT_CALLER).build();
         EditIncidentCommand editIncidentCommand = new EditIncidentCommand(outOfBoundIndex, editor);
 
